@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+
+<h1>Pay Ticket</h1>
+<input type="number" id="a">
+<button onclick="ticket()">Ticket</button>
+
+<script>
+    function ticket() {
+        let a = Number(document.getElementById('a').value);
+
+        if (a < 12) {
+            alert('You pay 5');
+        } 
+        else if (a >= 12 && a <= 18) {
+            alert('You pay 10');
+        } 
+        else {
+            alert('You pay 15');
+        }
+    }
+</script>
+
+</body>
+</html>

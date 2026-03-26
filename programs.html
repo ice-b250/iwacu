@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IWACU FOUNDATION | Programs</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    font-family:'Segoe UI', sans-serif;
+    background:#f4f7fb;
+    margin:0;
+    color:#1a2b4c;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    background:#0b3d91;
+    color:white;
+}
+
+nav .logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin:0 15px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ff7a00;
+    transform:scale(1.1);
+}
+
+/* PROGRAMS SECTION */
+.section{
+    padding:80px 40px;
+    text-align:center;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:40px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,.1);
+    transition:.4s;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:#ff7a00;
+    color:white;
+}
+
+.card i{
+    font-size:40px;
+    margin-bottom:10px;
+    transition:.3s;
+}
+
+.card:hover i{
+    color:white;
+}
+
+/* FOOTER */
+footer{
+    background:#0b3d91;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+footer a{
+    color:#ff7a00;
+    margin:0 10px;
+    font-size:20px;
+    transition:.3s;
+}
+
+footer a:hover{
+    color:white;
+    transform:scale(1.3);
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo"><i class="fa-solid fa-palette"></i> IWACU FOUNDATION</div>
+    <ul>
+        <li><a href="iwacu-foundation.html">Home</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- PROGRAMS -->
+<section class="section" id="programs">
+<h2>Our Programs</h2>
+<div class="grid">
+    <div class="card">
+        <i class="fa-solid fa-palette"></i>
+        <h3>Visual Arts</h3>
+        <p>Creative art training, painting, and workshops to empower youth.</p>
+    </div>
+    <div class="card">
+        <i class="fa-solid fa-people-group"></i>
+        <h3>Traditional Dance</h3>
+        <p>Preserving cultural heritage through group performances.</p>
+    </div>
+    <div class="card">
+        <i class="fa-solid fa-person-running"></i>
+        <h3>Acrobatics</h3>
+        <p>Acrobatic training for children and youth development.</p>
+    </div>
+    <div class="card">
+        <i class="fa-solid fa-drum"></i>
+        <h3>Music & Drums</h3>
+        <p>Music lessons, band training, and live performances.</p>
+    </div>
+    <div class="card">
+        <i class="fa-solid fa-microphone"></i>
+        <h3>Songs & Vocals</h3>
+        <p>Vocal training, choir, and music competitions.</p>
+    </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 IWACU FOUNDATION</p>
+<div>
+<a href="#"><i class="fa-brands fa-facebook"></i></a>
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+<a href="#"><i class="fa-brands fa-tiktok"></i></a>
+<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+<a href="#"><i class="fa-brands fa-youtube"></i></a>
+</div>
+</footer>
+
+</body>
+</html>

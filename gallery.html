@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IWACU FOUNDATION | Gallery</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    font-family:'Segoe UI', sans-serif;
+    background:#f4f7fb;
+    margin:0;
+    color:#1a2b4c;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 40px;
+    background:#0b3d91;
+    color:white;
+}
+
+nav .logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin:0 15px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#ff7a00;
+    transform:scale(1.1);
+}
+
+/* GALLERY SECTION */
+.section{
+    padding:80px 40px;
+    text-align:center;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:40px;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:15px;
+    transition:.4s;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+/* LIGHTBOX */
+#lightbox{
+    position:fixed;
+    top:0;left:0;width:100%;height:100%;
+    background:rgba(0,0,0,0.9);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:1000;
+}
+
+#lightbox img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:15px;
+}
+
+/* FOOTER */
+footer{
+    background:#0b3d91;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+footer a{
+    color:#ff7a00;
+    margin:0 10px;
+    font-size:20px;
+    transition:.3s;
+}
+
+footer a:hover{
+    color:white;
+    transform:scale(1.3);
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <div class="logo"><i class="fa-solid fa-palette"></i> IWACU FOUNDATION</div>
+    <ul>
+        <li><a href="iwacu-foundation.html">Home</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- GALLERY -->
+<section class="section" id="gallery">
+<h2>Gallery of Afro & Artistic Work</h2>
+<div class="gallery">
+    <img src="https://images.unsplash.com/photo-1616628186816-ff78b2d6fcde" alt="Afro Art 1">
+    <img src="https://images.unsplash.com/photo-1597501974141-c2d55ff66b49" alt="Afro Art 2">
+    <img src="https://images.unsplash.com/photo-1616628186789-3b9a8c1de4b0" alt="Afro Art 3">
+    <img src="https://images.unsplash.com/photo-1600181958556-8f387d4c8b37" alt="Afro Art 4">
+    <img src="https://images.unsplash.com/photo-1620835482103-9e2e9ee94fc6" alt="Artistic 1">
+    <img src="https://images.unsplash.com/photo-1520962913601-2d5fcb2586cd" alt="Artistic 2">
+    <img src="u1.png" alt="iwacu heza">
+    <img src="u2.png" alt="iwacu heza">
+    <img src="u3.png" alt="iwacu heza">
+    <img src="u4.png" alt="iwacu heza">
+    <img src="u5.png" alt="iwacu heza">
+    <img src="benice.jpg" alt="iwacu heza">
+    <img src="u4.png" alt="iwacu heza">
+    <img src="u5.png" alt="iwacu heza">
+    <img src="u4.png" alt="iwacu heza">
+    <img src="u10.png" alt="iwacu heza">
+</div>
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="hideLightbox()">
+    <img id="lightbox-img" src="">
+</div>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 IWACU FOUNDATION</p>
+<div>
+<a href="#"><i class="fa-brands fa-facebook"></i></a>
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+<a href="#"><i class="fa-brands fa-tiktok"></i></a>
+<a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+<a href="#"><i class="fa-brands fa-youtube"></i></a>
+</div>
+</footer>
+
+<script>
+// LIGHTBOX FUNCTION
+const images = document.querySelectorAll('.gallery img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+images.forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+    });
+});
+
+function hideLightbox(){
+    lightbox.style.display = 'none';
+}
+</script>
+
+</body>
+</html>
